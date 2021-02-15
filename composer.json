@@ -1,0 +1,13 @@
+{
+    "name": "kester36/ip-list-check",
+    "description": "Fill List of IPs and check if any IP is in this list",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Petro Shpyhotskyi",
+            "email": "shpyhotskyi@gmail.com"
+        }
+    ],
+    "require": {}
+}
