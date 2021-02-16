@@ -9,5 +9,7 @@
             "email": "shpyhotskyi@gmail.com"
         }
     ],
-    "require": {}
+    "require-dev": {
+        "phpspec/phpspec": "^7.0"
+    }
 }
