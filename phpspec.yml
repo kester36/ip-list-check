@@ -1,4 +1,5 @@
 suites:
-  acme_suite:
+  default:
     namespace: Kester36\IpCollection
     psr4_prefix: Kester36\IpCollection
+formatter.name: pretty
