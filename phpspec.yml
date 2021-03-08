@@ -1,0 +1,4 @@
+suites:
+  acme_suite:
+    namespace: Kester36\IpCollection
+    psr4_prefix: Kester36\IpCollection
