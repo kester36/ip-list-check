@@ -12,8 +12,11 @@ class IpCollectionSpec extends ObjectBehavior
         $this->shouldHaveType(IpCollection::class);
     }
 
-    function it_has_method_for_add_ip_to_collection()
+    function it_is_ip_collection_container()
     {
-        $this->add('1.1.1.1');
+        $ip = '1.1.1.1';
+
+        $this->add($ip);
+        $this->getAll()->shouldBe([$ip]);
     }
 }

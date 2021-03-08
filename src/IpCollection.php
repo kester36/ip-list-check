@@ -10,4 +10,10 @@ class IpCollection
     {
         $this->ips[] = $ip;
     }
+
+    public function getAll()
+    {
+        return $this->ips;
+    }
+
 }
