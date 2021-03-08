@@ -6,7 +6,7 @@ class IpCollection
 {
     private $ips = [];
 
-    public function add(string $ip)
+    public function add(IpInterface $ip)
     {
         $this->ips[] = $ip;
     }

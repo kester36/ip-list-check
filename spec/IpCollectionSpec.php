@@ -3,6 +3,7 @@
 namespace spec\Kester36\IpCollection;
 
 use Kester36\IpCollection\IpCollection;
+use Kester36\IpCollection\IpInterface;
 use PhpSpec\ObjectBehavior;
 
 class IpCollectionSpec extends ObjectBehavior
@@ -12,10 +13,8 @@ class IpCollectionSpec extends ObjectBehavior
         $this->shouldHaveType(IpCollection::class);
     }
 
-    function it_is_ip_collection_container()
+    function it_is_ip_collection_container(IpInterface $ip)
     {
-        $ip = '1.1.1.1';
-
         $this->add($ip);
         $this->getAll()->shouldBe([$ip]);
     }
