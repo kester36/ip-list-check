@@ -14,5 +14,13 @@
     },
     "require-dev": {
         "phpspec/phpspec": "^7.0"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kester36\\IpCollection\\": "src/"
+        }
     }
 }
