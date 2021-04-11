@@ -18,4 +18,14 @@ class IpCollection
         return $this->ips;
     }
 
+    public function includes(string $ip): bool
+    {
+        foreach ($this->ips as $ipObject) {
+            if ($ipObject->support($ip)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }
