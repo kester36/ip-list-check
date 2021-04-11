@@ -13,7 +13,7 @@ class Ip implements IpInterface
     public function __construct(string $ip)
     {
         if (!(bool)filter_var($ip, FILTER_VALIDATE_IP)) {
-            throw new InvalidArgumentException("'$ip' is npt valid IP address");
+            throw new InvalidArgumentException("'$ip' is not valid IP address");
         }
 
         $this->ip = $ip;
