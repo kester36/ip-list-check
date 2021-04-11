@@ -10,6 +10,7 @@ class IpRange implements IpInterface
     private $to;
 
     /**
+     * @param string $ipCidr IPv4 only
      * @throws InvalidArgumentException
      */
     public function __construct(string $ipRange)
@@ -19,11 +20,11 @@ class IpRange implements IpInterface
             throw new InvalidArgumentException("'$ipRange' is not valid, it must include 2 IP's separated by single hyphen(-)");
         }
 
-        if (!(bool)filter_var($range[0], FILTER_VALIDATE_IP)) {
+        if (!(bool)filter_var($range[0], FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
             throw new InvalidArgumentException("First part of '$ipRange' is not valid IP)");
         }
 
-        if (!(bool)filter_var($range[1], FILTER_VALIDATE_IP)) {
+        if (!(bool)filter_var($range[1], FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
             throw new InvalidArgumentException("Second part of '$ipRange' is not valid IP)");
         }
 

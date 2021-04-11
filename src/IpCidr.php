@@ -10,6 +10,7 @@ class IpCidr implements IpInterface
     private $to;
 
     /**
+     * @param string $ipCidr IPv4 only
      * @throws InvalidArgumentException
      */
     public function __construct(string $ipCidr)
@@ -29,7 +30,7 @@ class IpCidr implements IpInterface
 
         var_dump($mask);
 
-        if (!(bool)filter_var($parts[0], FILTER_VALIDATE_IP)) {
+        if (!(bool)filter_var($parts[0], FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
             throw new InvalidArgumentException("Network address in '$ipCidr' is not valid");
         }
 
