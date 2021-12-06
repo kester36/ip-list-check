@@ -7,18 +7,21 @@ Then you can check is any IP is included inside this collection.
 ## How to use
 ### Create and fill collection
 ```php
-use Kester36\IpCollection;
+use Kester36\IpCollection\IpCollection;
+use Kester36\IpCollection\Ip;
+use Kester36\IpCollection\IpRange;
+use Kester36\IpCollection\IpCidr;
 
-$collection = new IpCollection\IpCollection;
+$collection = new IpCollection;
 
 // add single IP
-$collection->add(new IpCollection\Ip('10.10.0.1'));
-$collection->add(new IpCollection\Ip('10.10.100.212'));
+$collection->add(new Ip('10.10.0.1'));
+$collection->add(new Ip('10.10.100.212'));
 // add IPv4 range
-$collection->add(new IpCollection\IpRange('127.0.0.1-127.0.0.100'));
-$collection->add(new IpCollection\IpRange('127.0.1.223-127.0.2.31'));
+$collection->add(new IpRange('127.0.0.1-127.0.0.100'));
+$collection->add(new IpRange('127.0.1.223-127.0.2.31'));
 // add CIDR notation (IPv4)
-$collection->add(new IpCollection\IpCidr('192.168.0.0/16'));
+$collection->add(new IpCidr('192.168.0.0/16'));
 ```
 
 ### Check if IP in collection
